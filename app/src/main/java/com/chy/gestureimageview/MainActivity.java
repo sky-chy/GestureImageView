@@ -1,21 +1,20 @@
 package com.chy.gestureimageview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+
+import com.chy.imageview.GestureImageView;
 
 public class MainActivity extends AppCompatActivity {
+    private GestureImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        findViewById(R.id.img).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
-//            }
-//        });
+        imageView = findViewById(R.id.img);
+        imageView.setMiniAlpha(0.2f);
+        imageView.setChangeAlpha(false);
+        imageView.setChangeScale(true);
     }
 }
